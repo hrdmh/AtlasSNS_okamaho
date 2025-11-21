@@ -15,12 +15,12 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Scripts -->
   <!--サイトのアイコン指定-->
-  <link rel="icon" href="#" sizes="16x16" type="image/png" />
-  <link rel="icon" href="#" sizes="32x32" type="image/png" />
-  <link rel="icon" href="#" sizes="48x48" type="image/png" />
-  <link rel="icon" href="#" sizes="62x62" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="16x16" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="32x32" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="48x48" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="62x62" type="image/png" />
   <!--iphoneのアプリアイコン指定-->
-  <link rel="apple-touch-icon-precomposed" href="#" />
+  <link rel="apple-touch-icon-precomposed" href="画像のURL" />
   <!--OGPタグ/twitterカード-->
 </head>
 
