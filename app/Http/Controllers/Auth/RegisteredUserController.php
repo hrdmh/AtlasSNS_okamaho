@@ -30,6 +30,13 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        //バリデーションを設定
+        $validated = $request->validate([
+            'username' => 'required|min:2,max:12',
+            'email' => 'required|unique:users,mail|email|min:5|max:40',
+            'password' => 'required|alpha_dash|min:8|max:20|confirmed',
+        ]);
+
         User::create([
             'username' => $request->username,
             'email' => $request->email,
