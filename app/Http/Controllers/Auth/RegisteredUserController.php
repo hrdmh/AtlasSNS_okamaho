@@ -48,14 +48,12 @@ class RegisteredUserController extends Controller
 
     public function index(Request $request)
     {
-        //セッションにusernameデータを保存する
-        $request->session()->put('key', 'value');
         //フォームからusername属性をセッションに保存する
         $request->session()->put('username', $request->input('username'));
         //セッション「username」の値を取得
         $username = $request->session()->get('username');
         //指定の値を削除
-        $request->session()->forget('key');
+        $request->session()->flush();
 
     }
 
