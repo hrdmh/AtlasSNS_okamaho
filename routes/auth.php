@@ -11,8 +11,6 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [AuthenticatedSessionController::class, 'create']);
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
-    Route::get('logout', [AuthenticatedSessionController::class, 'logout']);
-
     Route::get('register', [RegisteredUserController::class, 'create']);
     Route::post('register', [RegisteredUserController::class, 'store']);
 
@@ -20,3 +18,5 @@ Route::middleware('guest')->group(function () {
     Route::post('added', [RegisteredUserController::class, 'added']);
 
 });
+
+Route::get('logout', [AuthenticatedSessionController::class, 'logout']);
