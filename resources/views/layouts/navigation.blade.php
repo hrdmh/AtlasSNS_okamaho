@@ -5,9 +5,9 @@
                     <p>〇〇さん</p>
                 </div>
                 <ul>
-                    <li><a href="">ホーム</a></li>
-                    <li><a href="">プロフィール</a></li>
-                    <li><a href="/resources/views/layouts/logout.blade.php">ログアウト</a></li>
+                    <li><a href="/top">ホーム</a></li>
+                    <li><a href="/profile">プロフィール</a></li>
+                    <li><a href="/resources/views/auth/login">ログアウト</a></li>
                 </ul>
             </div>
         </div>

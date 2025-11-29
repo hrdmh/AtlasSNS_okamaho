@@ -11,8 +11,4 @@ class UsersController extends Controller
         return view('users.search');
     }
 
-    public function logout(){
-        Auth::logout();
-        return view('layout.login');
-    }
 }
