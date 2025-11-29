@@ -7,7 +7,7 @@
                 <ul>
                     <li><a href="/top">ホーム</a></li>
                     <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/resources/views/auth/login">ログアウト</a></li>
+                    <li><a href="/login">ログアウト</a></li>
                 </ul>
             </div>
         </div>
