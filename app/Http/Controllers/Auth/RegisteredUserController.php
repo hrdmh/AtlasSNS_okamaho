@@ -47,8 +47,6 @@ class RegisteredUserController extends Controller
         $request->session()->put('username', $request->input('username'));
         //セッション「username」の値を取得
         $username = $request->session()->get('username');
-        //指定の値を削除
-        $request->session()->flush('username');
 
         return redirect('added');
     }
