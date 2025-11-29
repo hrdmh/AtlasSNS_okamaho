@@ -5,9 +5,9 @@
                     <p>〇〇さん</p>
                 </div>
                 <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/login">ログアウト</a></li>
+                    <li><a href="top">ホーム</a></li>
+                    <li><a href="profile">プロフィール</a></li>
+                    <li><a href="logout">ログアウト</a></li>
                 </ul>
             </div>
         </div>
