@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PostsController;
