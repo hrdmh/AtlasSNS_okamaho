@@ -43,22 +43,14 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('added');
-    }
-
-    public function index(Request $request)
-    {
-        $request->session()->put('key', 'value');
-        $request->session()->put('username','TEST');
         //フォームからusername属性をセッションに保存する
         $request->session()->put('username', $request->input('username'));
         //セッション「username」の値を取得
         $username = $request->session()->get('username');
-        $data = $request->session()->all();
-        $request->session()->forget('username');
         //指定の値を削除
-        $request->session()->flush();
+        $request->session()->flush('username');
 
+        return redirect('added');
     }
 
     public function added(): View
