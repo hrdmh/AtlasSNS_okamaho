@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UsersTableSeeder::class, //呼び出す
+            PostsTableSeeder::class,
         ]);
     }
 }

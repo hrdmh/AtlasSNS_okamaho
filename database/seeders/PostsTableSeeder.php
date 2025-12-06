@@ -15,5 +15,11 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         //
+            Post::create($i = 1, $i++)([
+                'user_id'    => $i,
+                'post'       => 'サンプル投稿' .$i,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
     }
 }
