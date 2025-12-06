@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-    padding: 50px 0;
+    height: 100%;
 }
 
 body {
@@ -11,8 +11,8 @@ body {
 
 
 .LoginForm {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 350px;
     background-color: #708090;
     margin: 0 auto;
 }
