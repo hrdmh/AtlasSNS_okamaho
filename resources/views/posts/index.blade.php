@@ -5,7 +5,6 @@
 
   {!! Form::open(['url' => '/post']) !!}
 
-  {{ Form::label('post') }}
   {{ Form::text('post',null,['class' => 'input']) }}
 
   {{ Form::submit('投稿') }}
