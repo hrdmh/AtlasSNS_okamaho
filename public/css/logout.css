@@ -18,9 +18,12 @@ label,
     display: block;
 }
 
-.LoginForm {
+.LoginForm,
+.Register {
     width: 200px;
     height: 350px;
+    border-radius: 10px;
     background-color: #708090;
+    opacity: 0.5;
     margin: 0 auto;
 }
