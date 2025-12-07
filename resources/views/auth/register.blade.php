@@ -7,22 +7,22 @@
     <h2>新規ユーザー登録</h2>
 
     <div>
-    {{ Form::label('ユーザー名',['class' => 'label']) }}
+    {{ Form::label('ユーザー名') }}
     {{ Form::text('username',null,['class' => 'input']) }}
     </div>
 
     <div>
-    {{ Form::label('メールアドレス',['class' => 'label']) }}
+    {{ Form::label('メールアドレス') }}
     {{ Form::email('email',null,['class' => 'input']) }}
     </div>
 
     <div>
-    {{ Form::label('パスワード',['class' => 'label']) }}
+    {{ Form::label('パスワード') }}
     {{ Form::text('password',null,['class' => 'input']) }}
     </div>
 
     <div>
-    {{ Form::label('パスワード確認',['class' => 'label']) }}
+    {{ Form::label('パスワード確認') }}
     {{ Form::text('password_confirmation',null,['class' => 'input']) }}
     </div>
 
