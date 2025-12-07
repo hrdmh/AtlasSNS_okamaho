@@ -1,6 +1,8 @@
 <x-logout-layout>
 
   <div class="LoginForm">
+
+    <div class="Box"></div>
     <!-- 適切なURLを入力してください -->
     {!! Form::open(['url' => '/login']) !!}
 
