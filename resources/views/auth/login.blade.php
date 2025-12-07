@@ -2,7 +2,7 @@
 
   <div class="LoginForm">
 
-    <div class="Box"></div>
+    <div class="Box">
     <!-- 適切なURLを入力してください -->
     {!! Form::open(['url' => '/login']) !!}
 
@@ -20,6 +20,8 @@
     {{ Form::submit('ログイン') }}
 
     <p class=""><a href="register">新規ユーザーの方はこちら</a></p>
+
+    </div>
 
     {!! Form::close() !!}
   </div>

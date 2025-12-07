@@ -2,7 +2,7 @@
 
 <div class="Register">
 
-    <div class="Box"></div>
+    <div class="Box">
     <!-- 適切なURLを入力してください -->
     {!! Form::open(['url' => '/register']) !!}
 
@@ -41,6 +41,8 @@
     @endif
 
     <p><a href="login">ログイン画面へ戻る</a></p>
+
+    </div>
 
     {!! Form::close() !!}
 
