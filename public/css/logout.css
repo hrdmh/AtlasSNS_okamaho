@@ -2,7 +2,6 @@
 
 html {
     height: 100%;
-    color: #fff;
 }
 
 body {
@@ -17,6 +16,8 @@ div {
 label,
 .input {
     display: block;
+    color: #fff;
+    opacity: 10;
 }
 
 .Box {
