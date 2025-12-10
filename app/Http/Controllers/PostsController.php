@@ -12,7 +12,7 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
         $post->Post::get();
-        return view('posts.index', ['post'->$post]);
+        return view('posts.index', ['post' -> $post]);
     }
 
     //新規投稿処理
@@ -23,7 +23,7 @@ class PostsController extends Controller
 
         Post::create([
             'user_id'->$users_id,
-            'post'->$posts
+            'post'->$post,
         ]);
 
         return redirect('/top');
