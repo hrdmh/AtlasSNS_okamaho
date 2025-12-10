@@ -1,7 +1,7 @@
 <x-login-layout>
 
   <div class="NewPost">
-    {!! Form::open(['url' => '/post']) !!}
+    {!! Form::open(['url' => '/top']) !!}
 
     {{ Form::text('post',null,['class' => 'input']) }}
 
@@ -9,5 +9,7 @@
 
     {!! Form::close() !!}
   </div>
+
+
 
 </x-login-layout>
