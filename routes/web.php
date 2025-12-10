@@ -23,6 +23,8 @@ require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => 'auth'], function() {
 
+    Route::resource('user', 'UsersController');
+
     Route::get('top', [PostsController::class, 'index']);
 
     Route::get('profile', [ProfileController::class, 'profile']);
