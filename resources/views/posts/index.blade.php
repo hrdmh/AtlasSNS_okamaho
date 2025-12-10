@@ -10,11 +10,11 @@
   </div>
 
   <div>
-    @foreach($list as $list)
+    @foreach($posts as $post)
     <tr>
-      <tb>{{ $list -> user_id }}</tb>
-      <tb>{{ $list -> post }}</tb>
-      <tb>{{ $list -> create }}</tb>
+      <tb>{{ $post -> user_id }}</tb>
+      <tb>{{ $post -> post }}</tb>
+      <tb>{{ $post -> create_at }}</tb>
     </tr>
     @endforeach
   </div>

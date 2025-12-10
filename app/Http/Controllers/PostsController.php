@@ -11,8 +11,8 @@ class PostsController extends Controller
 {
     //一覧表示
     public function index(){
-        $list->Post::get();
-        return view('posts.index', ['list'->$list]);
+        $post->Post::get();
+        return view('posts.index', ['post'->$post]);
     }
 
     //新規投稿処理
