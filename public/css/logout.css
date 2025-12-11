@@ -30,10 +30,14 @@ label,
 }
 
 h1 {
-    width: 150px;
+    width: 30px;
 }
 
 h2 {
     color: #fff;
     opacity: 1;
+}
+
+p {
+    color: #fff;
 }
