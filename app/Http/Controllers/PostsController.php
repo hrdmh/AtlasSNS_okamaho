@@ -11,8 +11,8 @@ class PostsController extends Controller
 {
     //一覧表示
     public function index(){
-        $posts->Post::get(); //Postモデルからレコード情報を取得
-        return view('index', ['posts' => $posts]); //変数をbladeへ渡す
+        $lists->Post::get(); //Postモデルからレコード情報を取得
+        return view('posts.index', ['lists' => $lists]); //変数をbladeへ渡す
     }
 
     //新規投稿処理
@@ -23,7 +23,7 @@ class PostsController extends Controller
 
         Post::create([
             'user_id'->$users_id,
-            'post'->$post,
+            'post'->$posts,
         ]);
 
         return redirect('/top');
