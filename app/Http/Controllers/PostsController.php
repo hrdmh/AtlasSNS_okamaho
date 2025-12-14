@@ -9,11 +9,6 @@ use App\Models\Post;
 
 class PostsController extends Controller
 {
-    //一覧表示
-    public function index(){
-        $lists->Post::get(); //Postモデルからレコード情報を取得
-        return view('posts.index', ['lists' => $lists]); //変数をbladeへ渡す
-    }
 
     //新規投稿処理
     public function store(Request $request){
@@ -27,6 +22,12 @@ class PostsController extends Controller
         ]);
 
         return redirect('/top');
+    }
+
+    //一覧表示
+    public function index(){
+        $lists->Post::get(); //Postモデルからレコード情報を取得
+        return view('posts.index', ['lists' => $lists]); //変数をbladeへ渡す
     }
 
     //投稿削除処理
