@@ -13,8 +13,8 @@ class PostsController extends Controller
     public function index(){
 
         $lists = [
-            'user_id' => $users_id,
-            'post' => $posts,
+            'user_id' => Auth::user()->id,
+            'post' => $request->input('post'),
         ];
 
         $lists->Post::get(); //Postモデルからレコード情報を取得
@@ -24,8 +24,8 @@ class PostsController extends Controller
     //新規投稿処理
     public function store(Request $request){
         //
-        $posts = $request->input('post');
         $users_id = Auth::user()->id;
+        $posts = $request->input('post');
 
         Post::create([
             'user_id'->$users_id,
