@@ -13,13 +13,8 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
 
-        $lists = [
-            'user_id' => Auth::user()->id,
-            'post' => Post::where()->post,
-        ];
-
-        $lists->Post::get(); //Postモデルからレコード情報を取得
-        return view('posts.index', ['lists' => $lists]); //変数をbladeへ渡す
+        $lists = Post::select('user_id', 'post')->get(); //postsテーブルからデータを取得
+        return view('posts.index', compact('lists')); //変数をbladeへ渡す
     }
 
     //新規投稿処理
