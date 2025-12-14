@@ -1,11 +1,11 @@
 <x-login-layout>
 
   <div class="">
-    <div class="NewPost">
+    <div class="">
       {!! Form::open(['url' => '/top']) !!}
       {{ Form::text('post',null,['class' => 'input', 'placeholder' => '投稿内容を入力してください']) }}
     </div>
-    <button type="submit" class=""><img src="images/post.png" alt="送信"></button>
+    <button type="submit" class="btn btn-post create-right"><img src="images/post.png" alt="送信"></button>
     {!! Form::close() !!}
   </div>
 

@@ -1,18 +1,18 @@
 <x-logout-layout>
 
-  <div class="LoginForm">
+  <div class="login-form">
 
-    <div class="Box">
+    <div class="box">
     <!-- 適切なURLを入力してください -->
     {!! Form::open(['url' => '/login']) !!}
 
     <h2>AtlasSNSへようこそ</h2>
 
-    <div>
+    <div class="form-group">
       {{ Form::label('email') }}
       {{ Form::text('email',null,['class' => 'input']) }}
     </div>
-    <div>
+    <div class="form-group">
       {{ Form::label('password') }}
       {{ Form::password('password',['class' => 'input']) }}
     </div>

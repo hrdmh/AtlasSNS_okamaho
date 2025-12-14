@@ -11,8 +11,8 @@ class PostsController extends Controller
 {
     //一覧表示
     public function index(){
-        $post->Post::get();
-        return view('posts.index', ['post' -> $post]);
+        $posts->Post::get(); //Postモデルからレコード情報を取得
+        return view('index', ['posts' => $posts]); //変数をbladeへ渡す
     }
 
     //新規投稿処理

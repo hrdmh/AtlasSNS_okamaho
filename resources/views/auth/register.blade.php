@@ -8,22 +8,22 @@
 
     <h2>新規ユーザー登録</h2>
 
-    <div>
+    <div class="form-group">
     {{ Form::label('ユーザー名') }}
     {{ Form::text('username',null,['class' => 'input']) }}
     </div>
 
-    <div>
+    <div class="form-group">
     {{ Form::label('メールアドレス') }}
     {{ Form::email('email',null,['class' => 'input']) }}
     </div>
 
-    <div>
+    <div class="form-group">
     {{ Form::label('パスワード') }}
     {{ Form::text('password',null,['class' => 'input']) }}
     </div>
 
-    <div>
+    <div class="form-group">
     {{ Form::label('パスワード確認') }}
     {{ Form::text('password_confirmation',null,['class' => 'input']) }}
     </div>
