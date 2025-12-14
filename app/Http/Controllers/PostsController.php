@@ -15,7 +15,7 @@ class PostsController extends Controller
 
         $lists = [
             'user_id' => Auth::user()->id,
-            'post' => Post::post()->post,
+            'post' => Post::where()->post,
         ];
 
         $lists->Post::get(); //Postモデルからレコード情報を取得
