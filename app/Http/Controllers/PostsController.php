@@ -15,6 +15,7 @@ class PostsController extends Controller
 
         $lists = Post::select('user_id', 'post')->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists')); //変数をbladeへ渡す
+        dd($lists);
     }
 
     //新規投稿処理
