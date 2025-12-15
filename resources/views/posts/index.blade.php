@@ -4,7 +4,7 @@
     <div class="">
       <form method="POST" action="http://127.0.0.1:8000/top" accept-charset="UTF-8">
         <input name="_token" type="hidden" value="5iLaZKVO88ROCiOUXWGez4IbcfOJlE5WeGOf7BOi">
-        <input class="input" placeholder="投稿内容を入力してください" name="post" type="text">
+        <input name="post" placeholder="投稿内容を入力してください" type="text">
       </form>
     </div>
     <button type="submit" class="btn btn-post create-right"><img src="images/post.png" alt="送信"></button>

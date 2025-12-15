@@ -20,7 +20,7 @@ class PostsController extends Controller
     //新規投稿処理
     public function store(Request $request){
         //
-        $users_id = Auth::user()->id;
+        $users_id = Auth::user()->id; //ログインしたユーザーの取得
         $posts = $request->input('post');
 
         Post::create([
