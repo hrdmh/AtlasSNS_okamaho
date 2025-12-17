@@ -25,7 +25,7 @@ class PostsController extends Controller
             'post' => 'required|max:150', //バリデーション設定
         ]);
 
-        $user_id = Auth::user()->$id; //ログインしたユーザーの取得
+        $user_id = Auth::user(); //ログインしたユーザーの取得
         $post = $request->input('post');
 
         Post::create([
@@ -34,11 +34,7 @@ class PostsController extends Controller
         ]);
 
         return redirect('/top');
-    }
 
-    //投稿削除処理
-    public function destroy($id){
-        //
     }
 
 }
