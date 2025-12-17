@@ -18,19 +18,19 @@ class PostsController extends Controller
     }
 
     //新規投稿処理
-    public function store(Request $request){
+    public function postCreate(Request $request){
         //
 
         $validated = $request->validate([
             'post' => 'required|max:150', //バリデーション設定
         ]);
 
-        $user_id = Auth::user()->id; //ログインしたユーザーの取得
+        $user_id = Auth::user()->$id; //ログインしたユーザーの取得
         $post = $request->input('post');
 
         Post::create([
-            'user_id'->$user_id,
-            'post'->$post,
+            'user_id' => $user_id,
+            'post' => $post,
         ]);
 
         return redirect('/top');
