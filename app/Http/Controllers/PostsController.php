@@ -21,8 +21,8 @@ class PostsController extends Controller
     public function store(Request $request){
         //
 
-        $request->validate([
-            'post' => 'required|max150', //バリデーション設定
+        $validated = $request->validate([
+            'post' => 'required|max:150', //バリデーション設定
         ]);
 
         $users_id = Auth::user()->id; //ログインしたユーザーの取得
