@@ -25,12 +25,12 @@ class PostsController extends Controller
             'post' => 'required|max:150', //バリデーション設定
         ]);
 
-        $users_id = Auth::user()->id; //ログインしたユーザーの取得
-        $posts = $request->input('post');
+        $user_id = Auth::user()->id; //ログインしたユーザーの取得
+        $post = $request->input('post');
 
         Post::create([
-            'user_id'->$users_id,
-            'post'->$posts,
+            'user_id'->$user_id,
+            'post'->$post,
         ]);
 
         return redirect('/top');
