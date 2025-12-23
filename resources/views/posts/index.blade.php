@@ -13,7 +13,7 @@
   <div>
     @foreach($lists as $list)
     <tr>
-      <tb>{{ $list -> username }}</tb>
+      <tb>{{ $list -> user -> username }}</tb>
       <tb>{{ $list -> post }}</tb>
       <tb>{{ $list -> created_at }}</tb>
     </tr>
