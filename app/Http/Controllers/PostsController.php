@@ -13,7 +13,7 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
 
-        $lists = Post::select('user_id', 'post')->get(); //postsテーブルからデータを取得
+        $lists = Post::select()->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists')); //変数をbladeへ渡す
     }
 
