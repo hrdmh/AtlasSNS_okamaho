@@ -2,7 +2,7 @@
 
   <div class="">
     <div class="form-group">
-      <form method="POST" action="/post/create" accept-charset="UTF-8">
+      <form method="POST" action="/postCreate" accept-charset="UTF-8">
       @csrf
         <input name="post" placeholder="投稿内容を入力してください" type="text">
         <button type="submit" class="btn btn-post create-right"><img src="images/post.png" alt="送信"></button>
