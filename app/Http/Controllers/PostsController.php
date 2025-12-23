@@ -25,7 +25,7 @@ class PostsController extends Controller
             'post' => 'required|max:150', //バリデーション設定
         ]);
 
-        $user_id = Auth::user(); //ログインしたユーザーの取得
+        $user_id = Auth::user()->id; //ログインしたユーザーのIDのみ取得
         $post = $request->input('post');
 
         Post::create([
