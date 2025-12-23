@@ -15,7 +15,7 @@
     <tr>
       <tb>{{ $list -> username }}</tb>
       <tb>{{ $list -> post }}</tb>
-      <tb>{{ $list -> create_at }}</tb>
+      <tb>{{ $list -> created_at }}</tb>
     </tr>
     @endforeach
   </div>
