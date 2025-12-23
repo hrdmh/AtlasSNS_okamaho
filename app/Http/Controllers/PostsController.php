@@ -26,12 +26,10 @@ class PostsController extends Controller
         ]);
 
         $user_id = Auth::users()->id; //ログインしているユーザーのIDを取得
-        $username = Auth::users()->username; //ログインしているユーザーネームを取得
         $post = $request->input('post');
 
         Post::create([
             'user_id' => $user_id,
-            'username' => $username,
             'post' => $post,
         ]);
 
