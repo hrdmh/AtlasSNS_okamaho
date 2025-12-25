@@ -1,11 +1,12 @@
 <x-login-layout>
 
   <div class="">
-    <div class="form-group">
 
       @if($user->icon_image)
       <img src="{{ asset($user->icon_image) }}" alt="User Icon">
       @endif
+
+    <div class="form-group">
 
       <form method="POST" action="/top" accept-charset="UTF-8">
       @csrf
