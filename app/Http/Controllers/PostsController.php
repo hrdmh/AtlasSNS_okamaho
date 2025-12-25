@@ -25,7 +25,9 @@ class PostsController extends Controller
 
         $lists = Post::with('user')->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists')); //変数をbladeへ渡す
+
     }
+
 
     //Userモデルとのリレーションを定義
     public function user() {
