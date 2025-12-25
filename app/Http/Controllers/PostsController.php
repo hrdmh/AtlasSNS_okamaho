@@ -19,7 +19,6 @@ class PostsController extends Controller
     }
 
 
-
     //一覧表示
     public function post(){
 
