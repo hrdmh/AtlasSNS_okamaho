@@ -14,7 +14,7 @@ class PostsController extends Controller
     public function index(){
 
        $user = Auth::user(); // ログインしているユーザーデータを取得
-       return view('index', compact('user')); // 変数をビューに渡す
+       return view('posts.index', compact('user')); // 変数をビューに渡す
 
     }
 
