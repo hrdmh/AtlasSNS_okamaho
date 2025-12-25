@@ -12,11 +12,9 @@
 
   <div>
     @foreach($lists as $list)
-    <tr>
-      <tb>{{ $list -> user -> username }}</tb>
-      <tb>{{ $list -> post }}</tb>
-      <tb>{{ $list -> created_at }}</tb>
-    </tr>
+    <p>{{ $list -> user -> username }}</p>
+    <p>{{ $list -> post }}</p>
+    <p>{{ $list -> created_at }}</p>
     @endforeach
   </div>
 
