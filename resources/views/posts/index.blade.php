@@ -2,8 +2,8 @@
 
   <div class="">
 
-      @if($user->icon_image)
-      <img src="{{ asset($user->icon_image) }}" alt="User Icon">
+      @if($user -> icon_image)
+      <img src="{{ asset($user->icon_image) }}" alt="UserIcon">
       @endif
 
     <div class="form-group">

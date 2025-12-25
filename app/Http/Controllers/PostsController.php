@@ -10,8 +10,18 @@ use App\Models\Post;
 
 class PostsController extends Controller
 {
-    //一覧表示
+
     public function index(){
+
+       $user = Auth::user(); // ログインしているユーザーデータを取得
+       return view('index', compact('user')); // 変数をビューに渡す
+
+    }
+
+
+
+    //一覧表示
+    public function post(){
 
         $lists = Post::with('user')->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists')); //変数をbladeへ渡す
@@ -26,8 +36,6 @@ class PostsController extends Controller
     //新規投稿処理
     public function postCreate(Request $request){
         //
-
-        $user = Auth::user();
 
         $validated = $request->validate([
             'post' => 'required|max:150', //バリデーション設定
