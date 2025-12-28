@@ -2,8 +2,8 @@
 
   <div class="">
 
-      @if($lists -> user -> icon_image)
-      <img src="{{ asset($lists->user->icon_image) }}" alt="UserIcon">
+      @if($lists as $list)
+      <img src="{{ asset($list->user->icon_image) }}" alt="UserIcon">
       @endif
 
     <div class="form-group">
