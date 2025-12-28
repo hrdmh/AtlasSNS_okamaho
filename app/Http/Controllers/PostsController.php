@@ -14,7 +14,7 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
 
-        $user = Auth::user(); //ログインしているユーザーの情報を取得
+        $user = Auth::users()->icon_image; //ログインしているユーザーのアイコンを取得
         $lists = Post::with('user')->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists')); //変数をbladeへ渡す
 
