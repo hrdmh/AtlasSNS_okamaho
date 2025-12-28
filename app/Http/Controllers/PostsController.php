@@ -11,19 +11,11 @@ use App\Models\Post;
 class PostsController extends Controller
 {
 
+    //一覧表示
     public function index(){
 
-       $user = Auth::user(); // ログインしているユーザーデータを取得
-       return view('posts.index', compact('user')); // 変数をビューに渡す
-
-    }
-
-
-    //一覧表示
-    public function post(){
-
         $lists = Post::with('user')->get(); //postsテーブルからデータを取得
-        return view('posts.index', compact('lists')); //変数をbladeへ渡す
+        return view('posts.index', compact('user', 'lists')); //変数をbladeへ渡す
 
     }
 
