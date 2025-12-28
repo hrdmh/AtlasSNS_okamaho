@@ -15,7 +15,7 @@ class PostsController extends Controller
     public function index(){
 
         $lists = Post::with('user')->get(); //postsテーブルからデータを取得
-        return view('posts.index', compact('user', 'lists')); //変数をbladeへ渡す
+        return view('posts.index', compact('lists')); //変数をbladeへ渡す
 
     }
 
