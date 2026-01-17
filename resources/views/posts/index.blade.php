@@ -3,7 +3,7 @@
   <div class="">
 
       @if($user -> icon_image)
-      <img src="{{ asset($user->icon_image) }}" alt="UserIcon">
+      <img src="{{ asset($user->icon_image) }}" alt="アイコン">
       @endif
 
     <div class="form-group">
