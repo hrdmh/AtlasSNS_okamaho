@@ -19,12 +19,10 @@
     <p>{{ $list -> user -> username }}</p>
     <p>{{ $list -> post }}</p>
     <p>{{ $list -> created_at }}</p>
-    @endforeach
-    @foreach($array as $value)
-      <div class="content">
-          <!-- 投稿の編集ボタン -->
-          <a class="js-modal-open" href="" post="{{ $value->post }}" post_id="{{ $value->id }}">編集</a>
-      </div>
+    <div class="content">
+        <!-- 投稿の編集ボタン -->
+        <a class="js-modal-open" href="" post="{{ $value->post }}" post_id="{{ $value->id }}">編集</a>
+    </div>
     @endforeach
   </div>
 
