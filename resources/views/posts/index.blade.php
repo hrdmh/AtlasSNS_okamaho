@@ -2,12 +2,9 @@
 
   <div class="">
 
-      @if($user -> icon_image)
-      <img src="{{ asset($user->icon_image) }}" alt="アイコン">
-      @endif
-
     <div class="form-group">
 
+      <img src="{{ $iconPath }}" alt="{{ $user->name }}のアイコン">
       <form method="POST" action="/top" accept-charset="UTF-8">
       @csrf
         <input name="post" placeholder="投稿内容を入力してください" type="text">
@@ -19,7 +16,6 @@
 
   <div>
     @foreach($lists as $list)
-    <p>{{ $list -> user -> icon_image }}</p>
     <p>{{ $list -> user -> username }}</p>
     <p>{{ $list -> post }}</p>
     <p>{{ $list -> created_at }}</p>

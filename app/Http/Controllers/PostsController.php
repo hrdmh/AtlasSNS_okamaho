@@ -14,8 +14,8 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
 
-        $user = Auth::user()->icon_image; //ログインしているユーザーのアイコンを取得
-        $lists = Post::with('user')->get(); //postsテーブルからデータを取得
+        $iconPath = Storage::url('public/' . $user->icon_image); //シンボリックリンクでアイコンを取得
+        $lists = Post::with('users')->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists')); //変数をbladeへ渡す
 
     }
@@ -35,7 +35,7 @@ class PostsController extends Controller
             'post' => 'required|max:150', //バリデーション設定
         ]);
 
-        $user_id = Auth::users()->id; //ログインしているユーザーのIDを取得
+        $user_id = Auth::user()->id; //ログインしているユーザーのIDを取得
         $post = $request->input('post');
 
         Post::create([
