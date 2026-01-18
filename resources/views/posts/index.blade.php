@@ -16,7 +16,7 @@
 
   <div>
     @foreach($lists as $list)
-    <p>{{ $list -> user -> $iconPath }}</p>
+    <p>{{ $list -> $iconPath }}</p>
     <p>{{ $list -> user -> username }}</p>
     <p>{{ $list -> post }}</p>
     <p>{{ $list -> created_at }}</p>
