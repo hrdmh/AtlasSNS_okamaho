@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Post;
 
@@ -14,9 +15,10 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
 
+        $user = User::find($id); // ユーザーの取得
         $iconPath = Storage::url('public/' . $user->icon_image); //シンボリックリンクでアイコンを取得
         $lists = Post::with('users')->get(); //postsテーブルからデータを取得
-        return view('posts.index', compact('lists')); //変数をbladeへ渡す
+        return view('posts.index', compact('lists', 'iconPath')); //変数をbladeへ渡す
 
     }
 
