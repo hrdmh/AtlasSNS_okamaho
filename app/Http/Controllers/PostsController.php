@@ -15,9 +15,7 @@ class PostsController extends Controller
     //一覧表示
     public function index(){
 
-        $user_id = Auth::user()->id; //ログインしているユーザーのIDを取得
-        $user = User::find($user_id); // ユーザーの取得
-        $iconPath = Storage::url('public/' . $user->icon_image); //シンボリックリンクでアイコンを取得
+        $iconPath = Storage::url('public/' . Auth::user()->username->icon_image); //シンボリックリンクでアイコンを取得
         $lists = Post::with('user')->get(); //postsテーブルからデータを取得
         return view('posts.index', compact('lists', 'iconPath')); //変数をbladeへ渡す
 

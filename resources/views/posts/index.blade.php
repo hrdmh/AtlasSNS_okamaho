@@ -4,7 +4,7 @@
 
     <div class="form-group">
 
-      <img src="{{ $iconPath }}" alt="{{ $user->name }}のアイコン">
+      <img src="{{ $iconPath }}" alt="{{ Auth::user()->username }}のアイコン">
       <form method="POST" action="/top" accept-charset="UTF-8">
       @csrf
         <input name="post" placeholder="投稿内容を入力してください" type="text">
