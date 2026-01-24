@@ -51,11 +51,11 @@ class PostsController extends Controller
     //投稿内容更新
     public function postUpdate(Request $request){
 
-        $user_id = Auth::user()->id;
+        $post_id = Auth::user()->id;
         $post = Post::findOrFail($request->id);
         $up_post = $request->input('post');
 
-        Post::where('id', $user_id)->update([
+        Post::where('id', $post_id)->update([
             'post' => $up_post
         ]);
 
