@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('top', [PostsController::class, 'index']);
     Route::post('top', [PostsController::class, 'postCreate']);
-    Route::post('top', [PostsController::class, 'postUpdate']);
+    Route::post('top_update', [PostsController::class, 'postUpdate']);
 
     Route::get('profile', [ProfileController::class, 'profile']);
 
