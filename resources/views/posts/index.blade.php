@@ -21,7 +21,8 @@
     <p>{{ $list -> created_at }}</p>
     <div class="content">
         <!-- 投稿の編集ボタン -->
-        <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}">編集</a>
+        <button type="button" class="btn btn-primary"  href="" post="{{ $list->post }}" post_id="{{ $list->id }}">編集</button>
+        <button type="button" class="btn btn-secondary">削除</button>
     </div>
     @endforeach
   </div>
@@ -30,7 +31,7 @@
     <div class="modal js-modal">
       <div class="modal__bg js-modal-close"></div>
       <div class="modal__content">
-        <form action="" method="">
+        <form action="" method="POST">
           <textarea name="" class="modal_post"></textarea>
             <input type="hidden" name="" class="modal_id" value="">
             <input type="submit" value="更新">

@@ -48,4 +48,12 @@ class PostsController extends Controller
 
     }
 
+    //投稿内容更新
+    public function postUpdate(Request $request){
+
+        $post = Post::findOrFail($post_id);
+        $post->update($request->all);
+        return redirect('/top');
+    }
+
 }
