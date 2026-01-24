@@ -31,7 +31,7 @@
     <div class="modal js-modal">
       <div class="modal__bg js-modal-close"></div>
       <div class="modal__content">
-        <form action="/top_update" method="POST">
+        <form action="/top-update" method="POST">
           <textarea name="" class="modal_post"></textarea>
             <input type="hidden" name="" class="modal_id" value="">
             <input type="submit" value="更新">
