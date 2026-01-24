@@ -65,4 +65,13 @@ class PostsController extends Controller
         return redirect('/top');
     }
 
+
+    //投稿の削除
+    public function delete(Request $request){
+
+        Post::findOrFail($request->id)->delete;
+        return redirect('/top');
+
+    }
+
 }
