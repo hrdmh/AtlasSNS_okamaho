@@ -1,8 +1,8 @@
 
 
 $(function () {
-  // 編集ボタン(class="js-modal-open")が押されたら発動
-  $('.btn btn-primary').on('click', function () {
+  // 編集ボタン(class="btn btn-primary")が押されたら発動
+  $('.btn-primary').on('click', function () {
     // モーダルの中身(class="js-modal")の表示
     $('.js-modal').fadeIn();
     // 押されたボタンから投稿内容を取得し変数へ格納
@@ -17,8 +17,8 @@ $(function () {
     return false;
   });
 
-  // 背景部分や閉じるボタン(js-modal-close)が押されたら発動
-  $('.btn btn-secondary').on('click', function () {
+  // 背景部分や閉じるボタン(btn btn-secondary)が押されたら発動
+  $('.js-modal-close').on('click', function () {
     // モーダルの中身(class="js-modal")を非表示
     $('.js-modal').fadeOut();
     return false;
