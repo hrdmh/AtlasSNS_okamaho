@@ -51,9 +51,9 @@ class PostsController extends Controller
     //投稿内容更新
     public function postUpdate(Request $request){
 
-        $id = Auth::user()->id;
-        $post = Post::findOrFail($id);
-        $post->update($request->all);
+        $user_id = Auth::user()->id;
+        $post = Post::findOrFail($request->id);
+        $post->update();
         return redirect('/top');
     }
 
