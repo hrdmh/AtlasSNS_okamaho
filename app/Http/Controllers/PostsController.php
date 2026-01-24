@@ -53,9 +53,10 @@ class PostsController extends Controller
 
         $user_id = Auth::user()->id;
         $post = Post::findOrFail($request->id);
+        $up_post = $request->input('post');
 
         Post::where('id', $user_id)->update([
-            'post' => $post
+            'post' => $up_post
         ]);
 
         return redirect('/top');
