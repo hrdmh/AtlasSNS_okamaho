@@ -70,7 +70,7 @@ class PostsController extends Controller
     public function delete(Request $request){
 
         dd($request);
-        Post::findOrFail($request->id)->delete;
+        Post::findOrFail($request->id)->delete();
         return redirect('/top');
 
     }
