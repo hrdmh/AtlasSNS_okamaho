@@ -33,7 +33,7 @@
       <div class="modal__content">
         <form action="/top-update" method="POST">
           <textarea name="" class="modal_post"></textarea>
-            <input type="hidden" name="" class="modal_id" value="">
+            <input type="hidden" name="id" class="modal_id" value="">
             <input type="submit" value="更新">
               {{ csrf_field() }}
         </form>
