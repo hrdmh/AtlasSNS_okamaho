@@ -53,9 +53,8 @@ class PostsController extends Controller
 
         $user_id = Auth::user()->id;
         $post = Post::findOrFail($request->id);
-        $post->update();
 
-        Post::where('id')->update([
+        Post::where('id', $user_id)->update([
             'post' => $post
         ]);
 
