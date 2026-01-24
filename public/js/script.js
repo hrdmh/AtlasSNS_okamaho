@@ -1,7 +1,7 @@
 
 
 $(function () {
-  // 編集ボタン(class="js-modal-open")が押されたら発火
+  // 編集ボタン(class="js-modal-open")が押されたら発動
   $('.js-modal-open').on('click', function () {
     // モーダルの中身(class="js-modal")の表示
     $('.js-modal').fadeIn();
@@ -17,7 +17,7 @@ $(function () {
     return false;
   });
 
-  // 背景部分や閉じるボタン(js-modal-close)が押されたら発火
+  // 背景部分や閉じるボタン(js-modal-close)が押されたら発動
   $('.js-modal-close').on('click', function () {
     // モーダルの中身(class="js-modal")を非表示
     $('.js-modal').fadeOut();

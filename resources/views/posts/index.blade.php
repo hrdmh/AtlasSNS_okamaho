@@ -36,7 +36,6 @@
             <input type="submit" value="更新">
               {{ csrf_field() }}
         </form>
-        <a class="js-modal-close" href="">閉じる</a>
       </div>
     </div>
 
