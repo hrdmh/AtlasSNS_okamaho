@@ -52,11 +52,11 @@ class PostsController extends Controller
     public function postUpdate(Request $request){
 
         //dd($request);
-        $post = Post::findOrFail($request->id);
+        $id = Post::where('id', $request->id);
         $up_post = $request->input('post');
 
 
-        Post::where('id', $post)->update([
+        Post::update('id', $id)->update([
             'post' => $up_post
         ]);
 
