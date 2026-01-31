@@ -70,7 +70,7 @@ class PostsController extends Controller
     public function postDelete($id){
 
         //IDに基づいて投稿を取得
-        //dd($id);
+        dd($id);
         $post = Post::find($id);
 
         // 投稿が見つかった場合のみ削除処理を行う
