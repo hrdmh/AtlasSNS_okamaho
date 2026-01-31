@@ -67,11 +67,11 @@ class PostsController extends Controller
 
 
     //投稿の削除
-    public function postDelete($id){
+    public function postDelete(Request $request){
 
         //IDに基づいて投稿を取得し削除
         //dd($id);
-        Post::where('id', $id)->delete();
+        Post::where($request->id)->delete();
         return redirect('/top');
 
     }
