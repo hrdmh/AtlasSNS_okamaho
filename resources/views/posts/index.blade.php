@@ -22,7 +22,7 @@
     <div class="content">
         <!-- 投稿の編集ボタン -->
         <a class="btn btn-primary"  href="" post="{{ $list->post }}" post_id="{{ $list->id }}">編集</a>
-        <a class="btn btn-danger" href="/post/{{$id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')" >削除</a>
+        <a class="btn btn-danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')" >削除</a>
     </div>
     @endforeach
   </div>
