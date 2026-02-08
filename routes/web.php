@@ -28,7 +28,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('top', [PostsController::class, 'index']);
     Route::post('top', [PostsController::class, 'postCreate']);
     Route::post('/top-update', [PostsController::class, 'postUpdate']);
-    Route::get('/top-delete', [PostsController::class, 'postDelete']);
+    Route::delete('/posts/{id}', [PostController::class, 'destroy']);
 
     Route::get('profile', [ProfileController::class, 'profile']);
 
