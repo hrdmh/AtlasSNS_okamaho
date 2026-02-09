@@ -21,7 +21,7 @@
     <p>{{ $list -> created_at }}</p>
     <div class="content">
         <!-- 投稿の編集ボタン -->
-        <a class="btn btn-link"  href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" alt="編集"></a>
+        <a class="btn btn-light"  href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" alt="編集"></a>
         <a class="btn btn-link" href="/post/{{ $list->id }}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')" ><img src="images/trash.png" alt="削除"></a>
     </div>
     @endforeach

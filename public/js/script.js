@@ -1,8 +1,8 @@
 
 
 $(function () {
-  // 編集ボタン(class="btn btn-primary")が押されたら発火
-  $('.btn-primary').on('click', function () {
+  // 編集ボタン(class="btn btn-light")が押されたら発火
+  $('.btn-light').on('click', function () {
     // モーダルの中身(class="js-modal")の表示
     $('.js-modal').fadeIn();
     // 押されたボタンから投稿内容を取得し変数へ格納
