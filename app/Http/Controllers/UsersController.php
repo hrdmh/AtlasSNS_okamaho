@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     //ユーザー検索
-    public function search(){
+    public function search(Request $request){
         $keyword = $request->input('keyword');
         $query = User::query();
 
