@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    //
+    //ユーザー検索
     public function search(){
+        $keyword = $request->input('keyword');
+        $query = User::query();
+
+        if (!empty($keyword)) {
+        $query->where('name', 'like', '%' . $keyword . '%');
+        }
+
         return view('users.search');
     }
 
