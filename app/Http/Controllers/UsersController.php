@@ -12,8 +12,8 @@ class UsersController extends Controller
     public function list(){
 
         $iconPath = Storage::url('public/' . Auth::user()->icon_image); //シンボリックリンクでアイコンを取得
-        $userslist = User::with('user')->get(); //usersテーブルからデータを取得
-        return view('search.index', compact('userslist', 'iconPath')); //変数をbladeへ渡す
+        $userlists = User::with('user')->get(); //usersテーブルからデータを取得
+        return view('users.list', compact('userlists', 'iconPath')); //変数をbladeへ渡す
 
     }
 
