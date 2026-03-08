@@ -11,6 +11,13 @@
   <p>検索ワード：{{ $keyword }}</p>
 @endif
 
+  <div>
+    @foreach($userslist as $userlist)
+    <p>{{ $userlist -> icon }}</p>
+    <p>{{ $userlist -> user -> username }}</p>
+    </div>
+    @endforeach
+  </div>
 
 
 
