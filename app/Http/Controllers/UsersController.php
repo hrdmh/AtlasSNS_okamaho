@@ -22,7 +22,7 @@ class UsersController extends Controller
         $query->where('name', 'like', '%' . $keyword . '%');
         }
 
-        return view('users.search');
+        return view('users.search', compact('userlists'));
     }
 
     //ログインしているユーザーIDを引数で渡す
