@@ -20,7 +20,7 @@ class UsersController extends Controller
         //dd($userlists);
 
         if (!empty($keyword)) {
-        $query->where('name', 'like', '%' . $keyword . '%');
+        $query->where('username', 'like', '%' . $keyword . '%');
         $userlists = $query->get(); //更新されたクエリを取得
         }
 
