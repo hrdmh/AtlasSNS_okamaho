@@ -17,6 +17,7 @@ class UsersController extends Controller
         $query = User::query();
         $iconPath = Storage::url('public/' . Auth::user()->icon_image); //シンボリックリンクでアイコンを取得
         $userlists = User::all(); //usersテーブルからデータを取得
+        dd($userlists);
 
         if (!empty($keyword)) {
         $query->where('name', 'like', '%' . $keyword . '%');
