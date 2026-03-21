@@ -14,7 +14,7 @@
   <div>
     @foreach($userlists as $userlist)
     <p>{{ $userlist -> icon_image }}</p>
-    <p>{{ $userlist -> user -> username }}</p>
+    <p>{{ $userlist -> username }}</p>
     </div>
     @endforeach
   </div>
