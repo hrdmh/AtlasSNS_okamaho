@@ -13,7 +13,7 @@
 
   <div>
     @foreach($userlists as $userlist)
-    <p>{{ $userlist -> icon_image -> $iconPath }}</p>
+    <p><img src="{{ Storage::url('public/' . $userlist->icon_image) }}" alt="User Icon"></p>
     <p>{{ $userlist -> username }}</p>
     </div>
     @endforeach

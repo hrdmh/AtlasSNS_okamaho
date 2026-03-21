@@ -16,11 +16,12 @@ class UsersController extends Controller
         $keyword = $request->input('keyword');
         $query = User::query();
         $iconPath = Storage::url('public/' . Auth::user()->icon_image); //シンボリックリンクでアイコンを取得
-        $userlists = User::all(); //usersテーブルからデータを取得
+        $userlists = $query->get(); //usersテーブルからデータを取得
         //dd($userlists);
 
         if (!empty($keyword)) {
         $query->where('name', 'like', '%' . $keyword . '%');
+        $userlists = $query->get(); //更新されたクエリを取得
         }
 
         return view('users.search', compact('userlists'));
