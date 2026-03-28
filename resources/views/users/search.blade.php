@@ -15,6 +15,7 @@
     @foreach($userlists as $userlist)
     <p><img src="{{ Storage::url('public/' . $userlist->icon_image) }}" alt="User Icon"></p>
     <p>{{ $userlist -> username }}</p>
+    <button>フォローする</button>
     </div>
     @endforeach
   </div>
