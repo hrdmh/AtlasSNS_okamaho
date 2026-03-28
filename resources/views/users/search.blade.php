@@ -11,7 +11,7 @@
     <p>検索ワード：{{ $keyword }}</p>
   @endif
 
-  <div>
+  <div class="user_list">
     @foreach($userlists as $userlist)
     <p><img src="{{ Storage::url('public/' . $userlist->icon_image) }}" alt="User Icon"></p>
     <p>{{ $userlist -> username }}</p>
