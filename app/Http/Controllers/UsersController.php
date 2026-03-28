@@ -14,17 +14,17 @@ class UsersController extends Controller
     public function search(Request $request){
 
         $keyword = $request->input('keyword');
-        $query = User::query();
         $iconPath = Storage::url('public/' . Auth::user()->icon_image); //シンボリックリンクでアイコンを取得
         $userlists = $query->get(); //usersテーブルからデータを取得
         //dd($userlists);
         $currentUserId = Auth::id(); //ログイン中のユーザーのIDを取得
-        $query->where('id', '!=', $currentUserId); //↑ユーザーを除外
+        $query = User::where('id', '!=', $currentUserId); //ログイン中のユーザーを除外
 
         if (!empty($keyword)) {
         $query->where('username', 'like', '%' . $keyword . '%');
-        $userlists = $query->get(); //更新されたクエリを取得
         }
+
+        $userlists = $query->get(); //更新されたクエリを取得
 
         return view('users.search', compact('userlists', 'keyword'));
     }
