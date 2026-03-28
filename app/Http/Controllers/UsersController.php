@@ -15,7 +15,13 @@ class UsersController extends Controller
 
         $keyword = $request->input('keyword');
         $query = User::query();
+
         $iconPath = Storage::url('public/' . Auth::user()->icon_image); //シンボリックリンクでアイコンを取得
+        $iconPaths = [];
+        foreach ($iconImages as $image) {
+            $iconPaths[] = Storage::url('public/' . $image);
+        } // アイコン画像のURLを生成
+
         $userlists = $query->get(); //usersテーブルからデータを取得
         //dd($userlists);
 
