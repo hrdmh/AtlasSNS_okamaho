@@ -24,7 +24,7 @@ class UsersController extends Controller
         $userlists = $query->get(); //更新されたクエリを取得
         }
 
-        return view('users.search', compact('userlists'));
+        return view('users.search', compact('userlists', 'keyword'));
     }
 
     //ログインしているユーザーIDを引数で渡す
