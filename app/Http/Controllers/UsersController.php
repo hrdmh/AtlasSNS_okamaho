@@ -19,6 +19,9 @@ class UsersController extends Controller
         $userlists = $query->get(); //usersテーブルからデータを取得
         //dd($userlists);
 
+        $currentUserId = Auth::id(); //ログイン中のユーザーのIDを取得
+        $query->where('id', '!=', $currentUserId); //↑ユーザーを除外
+
         if (!empty($keyword)) {
         $query->where('username', 'like', '%' . $keyword . '%');
         $userlists = $query->get(); //更新されたクエリを取得
