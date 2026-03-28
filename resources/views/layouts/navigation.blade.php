@@ -9,5 +9,6 @@
                     <li><a href="profile">プロフィール</a></li>
                     <li><a href="logout">ログアウト</a></li>
                 </ul>
+                <img src="{{ $iconPath }}" alt="{{ Auth::user()->username }}のアイコン">
             </div>
         </div>
