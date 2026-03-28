@@ -15,7 +15,6 @@ class UsersController extends Controller
 
         $keyword = $request->input('keyword');
         $iconPath = Storage::url('public/' . Auth::user()->icon_image); //シンボリックリンクでアイコンを取得
-        $userlists = $query->get(); //usersテーブルからデータを取得
         //dd($userlists);
         $currentUserId = Auth::id(); //ログイン中のユーザーのIDを取得
         $query = User::where('id', '!=', $currentUserId); //ログイン中のユーザーを除外
