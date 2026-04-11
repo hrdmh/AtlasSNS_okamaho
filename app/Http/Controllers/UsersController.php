@@ -37,4 +37,19 @@ class UsersController extends Controller
         ]);
     }
 
+    //
+    public function followingCreate(Request $request){
+
+        $user_id = Auth::user()->id; //ログインしているユーザーのIDを取得
+        $following = $request->input('following');
+
+        Post::create([
+            'user_id' => $user_id,
+            'following' => $following,
+        ]); //ユーザーIDとフォローした人を登録する
+
+        return redirect('users.search', compact('userlists', 'keyword'));
+
+    }
+
 }
