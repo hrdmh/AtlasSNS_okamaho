@@ -42,7 +42,7 @@ class PostsController extends Controller
         Post::create([
             'user_id' => $user_id,
             'post' => $post,
-        ]);
+        ]); //ユーザーIDと投稿内容を登録する
 
         return redirect('/top');
 
