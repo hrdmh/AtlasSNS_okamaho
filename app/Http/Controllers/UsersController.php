@@ -43,7 +43,7 @@ class UsersController extends Controller
         $user_id = Auth::user()->id; //ログインしているユーザーのIDを取得
         $following = $request->input('following');
 
-        Post::create([
+        Follow::create([
             'user_id' => $user_id,
             'following' => $following,
         ]); //ユーザーIDとフォローした人を登録する
