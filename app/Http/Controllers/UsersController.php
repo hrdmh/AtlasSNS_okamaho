@@ -37,7 +37,7 @@ class UsersController extends Controller
         ]);
     }
 
-    //
+    //アカウントをフォローする
     public function followingCreate(Request $request){
 
         $user_id = Auth::user()->id; //ログインしているユーザーのIDを取得
