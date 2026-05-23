@@ -9,6 +9,9 @@ class Follow extends Model
 {
     use HasFactory;
 
+    // マスアサインメントを許可するフィールドを指定
+    protected $fillable = ['following_id', 'followed_id'];
+
     public function users()
     {
         return $this->belongsToMany(User::class, 'follow_user', 'follow_id', 'user_id');
